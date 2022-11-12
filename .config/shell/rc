@@ -1,0 +1,48 @@
+case "${OSTYPE}" in
+	freebsd*)
+		alias freebsd-update='PAGER=cat freebsd-update'
+		alias history=' history -d'
+		alias ls="ls -D '%Y/%m/%d %T' -F -G"
+
+		if [ -e /usr/ports/local/descfile ]; then
+			alias portsnap='portsnap -l /usr/ports/local/descfile'
+		fi
+	;;
+	linux-gnu)
+		alias history=' history'
+		alias ls='ls -X --classify --color=always --time-style=long-iso'
+
+		case "$(uname -r)" in
+			*Microsoft)
+				cd "/mnt/c/Users/${USER}/Desktop" || return
+			;;
+		esac
+
+		case "$(. /etc/os-release && echo "${ID}")" in
+			arch)
+				alias pacman='pacman --color=always'
+			;;
+			ubuntu)
+			;;
+		esac
+	;;
+esac
+
+alias df='df -h'
+alias du='du -h'
+alias grep='grep --color=always'
+alias less='less --quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
+alias lh='ls -lh'
+alias ssh='TERM=xterm ssh'
+alias su='su -m'
+alias tmux='tmux attach || tmux new'
+alias vim='vim -p'
+
+alias kill=' kill'
+alias rm=' rm'
+
+if builtin command -v colordiff > /dev/null; then
+	alias diff='colordiff'
+fi
+
+# vim:set filetype=sh:

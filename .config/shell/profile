@@ -1,0 +1,29 @@
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_STATE_HOME="${HOME}/.local/state"
+
+export EDITOR=vim
+export LANG=C.UTF-8
+export LESSHISTFILE=-
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export PATH="/usr/local/sbin:/usr/local/bin:${PATH}"
+export VISUAL=vim
+
+case "${OSTYPE}" in
+	freebsd*)
+	;;
+	linux-gnu)
+		case "$(uname -r)" in
+			*Microsoft)
+			;;
+		esac
+
+		case "$(. /etc/os-release && echo "${ID}")" in
+			ubuntu)
+			;;
+		esac
+	;;
+esac
+
+# vim:set filetype=sh:

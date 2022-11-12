@@ -1,0 +1,107 @@
+scriptencoding utf-8
+
+set runtimepath+=~/.vim/dein.vim
+if &compatible
+	set nocompatible
+endif
+
+call dein#begin(expand('~/.cache/dein'))
+
+call dein#add(expand('~/.vim/dein.vim'))
+call dein#add('vim-jp/vimdoc-ja')
+call dein#add('chrisbra/vim-diff-enhanced')
+call dein#add('editorconfig/editorconfig-vim')
+call dein#add('Yggdroot/indentLine')
+
+call dein#end()
+
+let g:indentLine_color_term = 239
+
+filetype plugin indent on
+syntax enable
+
+if dein#check_install()
+	call dein#install()
+endif
+
+set list listchars=tab:\>\ ,trail:-
+set modeline
+set tabstop=4
+set shiftwidth=4
+set nonumber
+
+"xfしたときに=以後で補完する(magic_equal_subst)
+set isfname-==
+"スペースも含める
+set isfname+=32
+"tab最大値
+set tabpagemax=100
+"タブを展開しない
+set noexpandtab
+"インクリメンタルサーチ
+set incsearch
+"対応する括弧を強調
+set showmatch
+"高度な自動インデント
+set smartindent
+"ルーラを表示する
+set ruler
+"検索結果をハイライト
+set hlsearch
+"ステータスラインを常時表示
+set laststatus=2
+"スワップファイルを/tmpに
+set directory=/tmp
+"viminfoを作成しない
+set viminfo=
+"インクリメント・ディクリメントで八進数は使わない
+set nrformats-=octal
+"
+set wildmenu
+set wildmode=longest,list,full
+"大文字小文字を区別しない
+set ignorecase
+"検索時に大文字を含んでいたら区別する
+set smartcase
+"タイトルを表示
+set title
+"マウスを無効化
+set mouse=
+"バックアップファイルを作成しない
+set nobackup
+"undoファイルを作成しない
+if exists('&undofile')
+	set noundofile
+endif
+"ワイルドカードで優先度を下げるやるら
+set suffixes=.bak,~,.swp,.o
+
+"jjで抜ける
+inoremap jj <ESC>
+"kkでも抜ける
+inoremap kk <ESC>
+
+highlight DiffDelete ctermfg=gray ctermbg=black
+highlight DiffAdd ctermbg=60
+highlight DiffText ctermbg=8
+highlight DiffChange ctermbg=236
+"コメントが見づらいので薄い青に
+highlight Comment ctermfg=6
+set diffopt=filler,context:10000
+
+"vimperatorぽく
+nnoremap <C-n> gt
+nnoremap <C-p> gT
+
+"連打でハイライトをクリア
+nnoremap <ESC><ESC><ESC> :nohlsearch<CR>
+
+augroup vimrc
+	"改行時の自動コメントをやめる
+	autocmd FileType * setlocal formatoptions-=ro
+
+	"diffupdateを自動で
+	autocmd BufWritePost * if &diff == 1 | diffupdate | endif
+
+	autocmd VimEnter,Colorscheme * highlight SpecialKey ctermbg=234
+augroup END
