@@ -1,5 +1,6 @@
 /*
 !/.gitignore
+!/.gitconfig
 !/.zprofile
 !/.tmux.conf
 !/.vim/
