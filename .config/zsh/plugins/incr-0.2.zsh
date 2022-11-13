@@ -8,7 +8,7 @@ zle -N vi-cmd-mode-incr
 zle -N vi-backward-delete-char-incr
 zle -N backward-delete-char-incr
 zle -N expand-or-complete-prefix-incr
-compinit
+compinit -u
 
 bindkey -M viins '^[' vi-cmd-mode-incr
 bindkey -M viins '^h' vi-backward-delete-char-incr

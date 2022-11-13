@@ -6,7 +6,7 @@ if builtin command -v git > /dev/null; then
 
 	. "${ZPLUG_HOME}/init.zsh"
 
-	zplug "zplug/zplug"
+	# zplug "yisizawa/zplug"
 	zplug "zsh-users/zsh", use:"Completion/BSD/Command",   if:"[[ $OSTYPE == freebsd* ]]"
 	zplug "zsh-users/zsh", use:"Completion/Linux/Command",  if:"[[ $OSTYPE == linux* ]]"
 	zplug "zsh-users/zsh", use:"Completion/Linux/Type", if:"[[ $OSTYPE == linux* ]]"
@@ -131,5 +131,3 @@ if builtin command -v zprof > /dev/null; then
 fi
 
 trap '. "${XDG_CONFIG_HOME}/zsh/.zshrc"; fc -R; echo reload' USR1
-
-# git submodule update
