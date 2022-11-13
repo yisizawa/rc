@@ -4,6 +4,9 @@
 !/.zprofile
 !/.tmux.conf
 !/.vim/
+!/.ssh/
+/.ssh/*
+!/.ssh/ssh_config
 !/.config/
 /.config/*
 !/.config/bashrc
