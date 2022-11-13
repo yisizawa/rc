@@ -19,7 +19,7 @@ cat << EOL > ~/.git/config
 EOL
 git -C "${HOME}" pull
 git -C "${HOME}" submodule update
-cat << EOL > ~/.vim/dein.vim/.git/config
+cat << EOL > ~/.git/modules/.vim/dein.vim/config
 [core]
 	repositoryformatversion = 0
 	filemode = true
