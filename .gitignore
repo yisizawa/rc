@@ -3,6 +3,7 @@
 !/.gitconfig
 !/.zprofile
 !/.tmux.conf
+!/.colordiffrc
 !/.vim/
 !/.ssh/
 /.ssh/*
@@ -10,6 +11,7 @@
 !/.config/
 /.config/*
 !/.config/bashrc
+!/.config/colordiffrc
 !/.config/shell/
 !/.config/zsh/
 /.config/zsh/.zcompdump
