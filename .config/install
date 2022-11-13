@@ -13,8 +13,8 @@ cat << EOL > ~/.git/config
 [submodule ".vim/dein.vim"]
 	url = https://github.com/Shougo/dein.vim
 	active = true
-[submodule ".config/zsh/zplug"]
-	url = https://github.com/zplug/zplug
+[submodule ".config/yisizawa/zplug"]
+	url = https://github.com/yisizawa/zplug
 	active = true
 EOL
 git -C "${HOME}" pull
