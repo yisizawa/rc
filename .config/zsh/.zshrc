@@ -131,3 +131,5 @@ if builtin command -v zprof > /dev/null; then
 fi
 
 trap '. "${XDG_CONFIG_HOME}/zsh/.zshrc"; fc -R; echo reload' USR1
+
+# git submodule update
