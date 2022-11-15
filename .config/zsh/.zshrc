@@ -1,5 +1,7 @@
 . "${XDG_CONFIG_HOME}/shell/rc"
 
+bindkey -e
+
 if builtin command -v git > /dev/null; then
 	export ZPLUG_HOME="${ZDOTDIR}/zplug"
 	export ZPLUG_CACHE_DIR="${XDG_CACHE_HOME}/zcache"
@@ -34,7 +36,6 @@ if builtin command -v git > /dev/null; then
 	zplug load
 fi
 
-bindkey -e
 bindkey '^]'   vi-find-next-char
 bindkey '^[^]' vi-find-prev-cahr
 
