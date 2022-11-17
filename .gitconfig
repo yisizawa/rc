@@ -3,3 +3,16 @@
 	name = yisizawa
 [credential]
 	helper = cache
+[init]
+	templatedir = /dev/null
+[core]
+	editor = vim
+	quotepath = false
+	fileMode = false
+[diff]
+	tool = vimdiff
+	algorithm = patience
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
