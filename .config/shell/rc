@@ -57,6 +57,8 @@ man() {
 		man "$@"
 }
 
-export PATH="${PATH}:${HOME}/.rvm/bin"
+if [ -d "${HOME}/.rvm/bin" ]; then
+	export PATH="${PATH}:${HOME}/.rvm/bin"
+fi
 
 # vim:set filetype=sh:

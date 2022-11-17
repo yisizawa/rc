@@ -10,7 +10,9 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export PATH="/usr/local/sbin:/usr/local/bin:${PATH}"
 export VISUAL=vim
 
-[[ -s "${HOME}/.rvm/scripts/rvm" ]] && . "${HOME}/.rvm/scripts/rvm"
+if [ -s "${HOME}/.rvm/scripts/rvm" ]; then
+	. "${HOME}/.rvm/scripts/rvm"
+fi
 
 case "${OSTYPE}" in
 	freebsd*)
