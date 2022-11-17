@@ -8,7 +8,7 @@ cat << EOL > ~/.git/config
 	bare = false
 	logallrefupdates = true
 [branch "master"]
-	remote = github.com:yisizawa/rc.git
+	remote = https://github.com/yisizawa/rc.git
 	merge = refs/heads/master
 [submodule ".vim/dein.vim"]
 	url = https://github.com/Shougo/dein.vim

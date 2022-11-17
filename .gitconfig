@@ -1,3 +1,5 @@
 [user]
 	email = yisizawa@users.noreply.github.com
 	name = yisizawa
+[credential]
+	helper = cache
