@@ -1,2 +1,25 @@
 . "${XDG_CONFIG_HOME}/shell/rc"
 HISTCONTROL=ignoreboth
+PS1="\$? \H \w \$ "
+HISTFILE="${XDG_CACHE_HOME}/bash_history"
+HISTSIZE=10000
+HISTFILESIZE=10000
+
+case "${OSTYPE}" in
+	freebsd*)
+		[[ $PS1 && -f /usr/local/share/bash-completion/bash_completion.sh ]] && . /usr/local/share/bash-completion/bash_completion.sh
+	;;
+	linux-gnu)
+		case "$(uname -r)" in
+			*Microsoft)
+			;;
+		esac
+
+		case "$(. /etc/os-release && echo "${ID}")" in
+			arch)
+			;;
+			ubuntu)
+			;;
+		esac
+	;;
+esac
