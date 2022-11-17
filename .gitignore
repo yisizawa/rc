@@ -11,8 +11,9 @@
 !/.config/
 /.config/*
 !/.config/bashrc
-!/.config/install
 !/.config/colordiffrc
+!/.config/git/
+!/.config/install
 !/.config/shell/
 !/.config/zsh/
 /.config/zsh/.zcompdump
