@@ -11,6 +11,7 @@ case "${OSTYPE}" in
 	;;
 	linux-gnu)
 		[[ $PS1 && -f /etc/profile.d/bash_completion.sh ]] && . /etc/profile.d/bash_completion.sh
+
 		case "$(uname -r)" in
 			*Microsoft)
 			;;
@@ -24,3 +25,7 @@ case "${OSTYPE}" in
 		esac
 	;;
 esac
+
+# 追記
+shopt -s histappend
+
