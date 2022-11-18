@@ -15,6 +15,7 @@
 
 !/.config/bashrc
 !/.config/colordiffrc
+!/.config/psqlrc
 !/.config/git/
 !/.config/install
 !/.config/shell/

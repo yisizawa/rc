@@ -1,0 +1,5 @@
+\timing on
+\conninfo
+\pset null (null)
+\set HISTCONTROL ignoredups
+\x auto
