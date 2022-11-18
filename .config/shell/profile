@@ -11,7 +11,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:${PATH}"
 export VISUAL=vim
 
 export PSQLRC="${XDG_CONFIG_HOME}/psqlrc"
-export PSQL_HISTORY="${XDG_CACHE_HOME}/pg_history"
+export PSQL_HISTORY="${XDG_CACHE_HOME}/psql_history"
 
 if [ -s "${HOME}/.rvm/scripts/rvm" ]; then
 	. "${HOME}/.rvm/scripts/rvm"
