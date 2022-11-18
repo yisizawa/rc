@@ -52,8 +52,8 @@ set hlsearch
 set laststatus=2
 "スワップファイルを/tmpに
 set directory=/tmp
-"viminfoを作成しない
-set viminfo=
+"viminfo
+set viminfo+=n~/.cache/viminfo
 "インクリメント・ディクリメントで八進数は使わない
 set nrformats-=octal
 "
