@@ -104,4 +104,10 @@ augroup vimrc
 	autocmd BufWritePost * if &diff == 1 | diffupdate | endif
 
 	autocmd VimEnter,Colorscheme * highlight SpecialKey ctermbg=234
+
+	if has('unix')
+		autocmd BufNewFile,BufRead /usr/local/etc/apache*/*/*.conf set filetype=apache
+		autocmd BufNewFile,BufRead /etc/rc.conf set filetype=sh
+		autocmd BufNewFile,BufRead /etc/make.conf set filetype=make
+	endif
 augroup END
