@@ -5,6 +5,7 @@
 !/.colordiffrc
 
 !/.vim/
+/.vim/.netrwhist
 
 !/.ssh/
 /.ssh/*
