@@ -1,2 +1,19 @@
-pkg upgrade
+. ~/.rvm/scripts/rvm
+ECHO_MSG=true make -C /usr/ports/local describe > /usr/ports/local/descfile
+PACKAGES=/usr/ports/packages/All portmaster --clean-packages -y
+_PKG=`make -V '${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}'`; pkg unlock -y ${_PKG} && make package deinstall install clean && pkg lock -y ${_PKG}
+freebsd-update fetch
+freebsd-update install
 fstat -m 2>/dev/null | awk '/mmap -.*r$/ && !a[$2]++{print $2}'
+ntpctl -s all
+pfctl -s rules
+pkg clean -ay
+pkg repo -q /usr/ports/packages
+pkg update
+pkg upgrade
+pkg version -vIL=
+pkg version -vURl'<' && pkg version -vIl'?' && pkg version -vIl'<' | fgrep "`pkg query -e %k=1 %n-`"
+portmaster --clean-distfiles -y
+portsnap auto
+rvm cleanup all
+rvm repair all
