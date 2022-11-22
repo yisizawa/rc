@@ -1,0 +1,2 @@
+pkg upgrade
+fstat -m 2>/dev/null | awk '/mmap -.*r$/ && !a[$2]++{print $2}'

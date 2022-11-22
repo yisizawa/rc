@@ -16,9 +16,10 @@
 
 !/.config/bashrc
 !/.config/colordiffrc
-!/.config/psqlrc
 !/.config/git/
+!/.config/history/
 !/.config/install
+!/.config/psqlrc
 !/.config/shell/
 !/.config/tmux/
 !/.config/zsh/
