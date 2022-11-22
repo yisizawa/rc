@@ -14,7 +14,7 @@ cat << EOL > ~/.git/config
 [submodule ".vim/dein.vim"]
 	url = https://github.com/Shougo/dein.vim
 	active = true
-[submodule ".config/yisizawa/zplug"]
+[submodule ".config/zsh/zplug"]
 	url = https://github.com/yisizawa/zplug
 	active = true
 EOL
