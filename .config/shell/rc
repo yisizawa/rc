@@ -22,6 +22,12 @@ case "${OSTYPE}" in
 			arch)
 				alias pacman='pacman --color=always'
 			;;
+			almalinux)
+			;;
+			debian)
+			;;
+			rhel)
+			;;
 			ubuntu)
 			;;
 		esac

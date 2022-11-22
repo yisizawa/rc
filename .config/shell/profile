@@ -27,6 +27,14 @@ case "${OSTYPE}" in
 		esac
 
 		case "$(. /etc/os-release && echo "${ID}")" in
+			arch)
+			;;
+			almalinux)
+			;;
+			debian)
+			;;
+			rhel)
+			;;
 			ubuntu)
 			;;
 		esac
