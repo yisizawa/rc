@@ -9,7 +9,6 @@ ntpctl -s all
 pfctl -s rules
 pkg clean -ay
 pkg repo -q /usr/ports/packages
-pkg update
 pkg upgrade
 pkg version -vIL=
 pkg version -vURl'<' && pkg version -vIl'?' && pkg version -vIl'<' | fgrep "`pkg query -e %k=1 %n-`"
