@@ -1,4 +1,5 @@
 #!/bin/sh -eu
+# \curl -sSL https://raw.githubusercontent.com/yisizawa/rc/master/.config/install | sh
 cd
 git -C "${HOME}" init
 cat << EOL > ~/.git/config
@@ -17,6 +18,7 @@ cat << EOL > ~/.git/config
 	url = https://github.com/yisizawa/zplug
 	active = true
 EOL
+rm -f .bash_profile
 git -C "${HOME}" pull
 git -C "${HOME}" submodule update
 cat << EOL > ~/.git/modules/.vim/dein.vim/config
