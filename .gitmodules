@@ -3,4 +3,4 @@
 	url = https://github.com/Shougo/dein.vim
 [submodule ".config/zsh/zplug"]
 	path = .config/zsh/zplug
-	url = https://github.com/zplug/zplug
+	url = https://github.com/yisizawa/zplug

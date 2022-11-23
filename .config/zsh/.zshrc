@@ -9,6 +9,7 @@ if builtin command -v git > /dev/null; then
 	. "${ZPLUG_HOME}/init.zsh"
 
 	# zplug "yisizawa/zplug"
+	zplug "zsh-users/zsh"
 	zplug "zsh-users/zsh", use:"Completion/BSD/Command",   if:"[[ $OSTYPE == freebsd* ]]"
 	zplug "zsh-users/zsh", use:"Completion/Linux/Command",  if:"[[ $OSTYPE == linux* ]]"
 	zplug "zsh-users/zsh", use:"Completion/Linux/Type", if:"[[ $OSTYPE == linux* ]]"
