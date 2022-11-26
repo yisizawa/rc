@@ -16,3 +16,4 @@ portmaster --clean-distfiles -y
 portsnap auto
 rvm cleanup all
 rvm repair all
+sudo -E zsh -l
