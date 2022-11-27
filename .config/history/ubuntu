@@ -1,1 +1,2 @@
 sudo sh -c "apt update && apt -y upgrade && apt -y autoremove"
+sudo apt-mark showmanual
