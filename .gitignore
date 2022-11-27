@@ -1,7 +1,6 @@
 /*
 !/.gitignore
 !/.zprofile
-!/.tmux.conf
 !/.colordiffrc
 
 !/.vim/
@@ -25,14 +24,3 @@
 !/.config/zsh/
 /.config/zsh/.zcompdump
 /.config/zsh/.chpwd-recent-dirs
-
-!/.local/
-/.local/*
-
-!/.local/share/
-/.local/share/*
-!/.local/share/.keep
-
-!/.local/state/
-/.local/state/*
-!/.local/state/.keep
