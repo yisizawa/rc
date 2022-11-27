@@ -26,6 +26,12 @@
 /.config/zsh/.zcompdump
 /.config/zsh/.chpwd-recent-dirs
 
+!/.cache/
+/.cache/*
+!/.cache/zsh/
+/.cache/zsh/*
+!/.cache/zsh/.keep
+
 !/.local/
 /.local/*
 
