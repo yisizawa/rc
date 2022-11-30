@@ -57,6 +57,31 @@ HISTFILE="${XDG_CACHE_HOME}/zsh/history"
 HISTSIZE=10000
 SAVEHIST=10000
 
+case "${OSTYPE}" in
+	freebsd*)
+		[[ ! -e "${HISTFILE}" ]] && cp "${XDG_CONFIG_HOME}/history/freebsd" "${HISTFILE}"
+	;;
+	linux-gnu)
+		case "$(uname -r)" in
+			*Microsoft)
+			;;
+		esac
+
+		case "$(. /etc/os-release && echo "${ID}")" in
+			arch)
+			;;
+			almalinux)
+			;;
+			debian)
+			;;
+			rhel)
+			;;
+			ubuntu)
+			;;
+		esac
+	;;
+esac
+
 alias -s py='python'
 alias -s rb='ruby'
 alias -s pl='perl'
