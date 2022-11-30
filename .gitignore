@@ -13,7 +13,7 @@
 !/.config/
 /.config/*
 
-!/.config/bashrc
+!/.config/bash/
 !/.config/colordiffrc
 !/.config/git/
 !/.config/history/
