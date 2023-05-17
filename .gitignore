@@ -22,5 +22,5 @@
 !/.config/shell/
 !/.config/tmux/
 !/.config/zsh/
-/.config/zsh/.zcompdump
+/.config/zsh/.zcompdump*
 /.config/zsh/.chpwd-recent-dirs
