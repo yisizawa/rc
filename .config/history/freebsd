@@ -17,3 +17,4 @@ portsnap auto
 rvm cleanup all
 rvm repair all
 sudo -E zsh -l
+zfs load-key -a
